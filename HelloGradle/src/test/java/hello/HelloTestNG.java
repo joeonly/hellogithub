@@ -10,8 +10,7 @@ public class HelloTestNG {
 		String s = "helloTestNG";
 		assertEquals("helloTestNG", s);
 		assertNotEquals("goodbyeJunit", s);
-
-        assertEquals("Hello WebApp!", messageService.getMessage());
+        System.out.println("Hello TestNG");
         throw new RuntimeException("JustForTest");
 	}
 }
