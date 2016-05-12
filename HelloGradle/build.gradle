@@ -23,12 +23,6 @@ dependencies {
     testCompile 'junit:junit:4.11'
 }
 
-test {
-    useTestNG() {
-        suites 'src/test/resources/'hellotestng.xml
-    }
-}
-
 gretty {
     port = 1080
     contextPath = '/'
