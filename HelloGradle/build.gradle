@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'war'
+apply plugin: 'org.akhikhl.gretty'
 
 version = '1.0.0'
 
@@ -17,10 +18,21 @@ buildscript {
     repositories {
         jcenter()
     }
+    dependencies {
+        classpath 'org.akhikhl.gretty:gretty:+'
+    }
 }
 
-test {  
-    useTestNG()
-}  
+test {
+    useTestNG() {
+        suites 'src/test/resources/'hellotestng.xml
+    }
+}
+
+gretty {
+    port = 1080
+    contextPath = '/'
+    servletContainer = 'jetty9'
+}
 
  

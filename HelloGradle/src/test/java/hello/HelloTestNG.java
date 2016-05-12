@@ -12,6 +12,7 @@ public class HelloTestNG {
 		assertNotEquals("goodbyeJunit", s);
         System.out.println("Hello TestNG");
 
+        MessageService messageService = new MessageServiceImpl();
         assertEquals("Hello WebApp!", messageService.getMessage());
         throw new RuntimeException("JustForTest");
 	}
