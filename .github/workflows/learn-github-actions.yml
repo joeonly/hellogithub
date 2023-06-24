@@ -6,3 +6,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: time>>~hello-github-actions.log
+
+
+jobs:
+  develop_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: setupjdk
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+          cache: 'maven'
+
+      - name: build
+        run: cd HelloActions && mvn -B package
+
+      - name: run
+        run: java -cp ./HelloActions/target/HelloActions-0.0.1-SNAPSHOT.jar sample.gitactions.HelloWorld
