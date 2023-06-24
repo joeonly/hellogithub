@@ -7,8 +7,9 @@ jobs:
     steps:
       - name: time
         run: time>>~/hello-github-actions.log
+
       - name: working dir
-         run: pwd>>~/hello-github-actions.log
+        run: pwd>>~/hello-github-actions.log
 
       - name: checkout
         uses: actions/checkout@v3
