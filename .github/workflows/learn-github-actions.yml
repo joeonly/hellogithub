@@ -5,4 +5,4 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - run: echo $(time)>>~hello-github-actions.log
+      - run: time>>~hello-github-actions.log
