@@ -5,13 +5,9 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
+      - name: shelldemo
       - run: time>>~hello-github-actions.log
 
-
-jobs:
-  develop_build:
-    runs-on: ubuntu-latest
-    steps:
       - name: checkout
         uses: actions/checkout@v3
 
