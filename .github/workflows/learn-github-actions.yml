@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: shelldemo
-      - run: time>>~hello-github-actions.log
+        run: time>>~hello-github-actions.log
 
       - name: checkout
         uses: actions/checkout@v3
